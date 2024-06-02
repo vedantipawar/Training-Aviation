@@ -17,28 +17,28 @@ const Sidebar = ({children}) => {
         {
             path:"/about",
             name:"My Account",
-            icon:<FaUserAlt/>
+            icon:<FaUserAlt className="small-circle"/>
             
         },
         {
             path:"/",
-            name:"Dashboard",
-            icon:<FaCircle/>
+            name:"Emergency Procedures",
+            icon:<FaCircle className="small-circle"/>
         },        
         {
             path:"/analytics",
-            name:"Analytics",
-            icon:<FaCircle/>
+            name:"Scenarios",
+            icon:<FaCircle className="small-circle"/>
         },
         {
             path:"/comment",
-            name:"Comment",
-            icon:<FaCircle/>
+            name:"CFI",
+            icon:<FaCircle className="small-circle"/>
         }   
     ]
     return (
         <div className="container">
-           <div style={{width: isOpen ? "400px" : "50px"}} className="sidebar">
+           <div style={{width: isOpen ? "600px" : "50px"}} className="sidebar">
                <div className="top_section">
                    <div style={{marginLeft: isOpen ? "0px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
@@ -46,6 +46,7 @@ const Sidebar = ({children}) => {
                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
                    
                </div>
+               <div className="menu-options">
                {
                    menuItem.map((item, index)=>(
                        <NavLink to={item.path} key={index} className="link" activeclassName="active">
@@ -54,6 +55,7 @@ const Sidebar = ({children}) => {
                        </NavLink>
                    ))
                }
+               </div>
            </div>
            <main>{children}</main>
         </div>
