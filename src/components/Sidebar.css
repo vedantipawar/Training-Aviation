@@ -9,7 +9,7 @@ body {
 
 /* General background of the sidebar */
 .sidebar {
-    background-color: #fc0444; /* Dark grey background */
+    background-color: #fc0444; 
     color: #ffffff; /* White text color */
     font-family: 'Roboto', sans-serif;
     width: 60px; /* Initial width */

@@ -1,6 +1,6 @@
+/* General styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    
     background-color: #F8F8F8;
 }
 .container {
@@ -9,17 +9,19 @@ body {
     justify-content: center; /* Space between left and right containers */
     height: 100vh; /* Full viewport height to center align vertically */
     text-align: left;
-
 }
 .left-container {
     flex: 2;
     width: 400px !important; /* Set a fixed width */
     height: 600px;  
-    margin : 10px; 
-    background-color: aquamarine; 
-
+    margin: 10px; 
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding-left: 0;
 }
-
 .right-container {
     flex: 1;
     text-align: left;
@@ -27,7 +29,7 @@ body {
     hyphens: auto; /* This automatically adds hyphens where appropriate */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 250px; /* Set a fixed width */
-    height: 500px ;
+    height: 500px;
     text-align: center;
     font-family: 'Roboto';
     background-color: white;
@@ -39,24 +41,79 @@ body {
     padding: 20px 20px;
     margin-right: 50px;
     margin-left: 50px;
-
 }
-
 .start-button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #000;
-    color: #fff;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     align-self: center; /* Centers the button horizontally in the flex container */
-    margin-top: 20px; /* Optional: Adds some space between the text and the button */
+    margin-bottom: 50px; /* Optional: Adds some space between the text and the button */
+    margin-top: 15px;
 }
-
 @media (max-width: 600px) {
-    
     .start-button {
         padding: 8px 16px;
     }
+}
+/* Procedure item styles */
+.procedure-item {
+    width: 80px; /* Fixed width */
+    height: 80px; /* Fixed height to make it circular */
+    padding: 0; /* No padding */
+    margin: 10px;
+    border: none;
+    background-color: #D1D1D1; /* Default background */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.3s;
+}
+.procedure-item.complete {
+    background-color: #fc0444;  /* Complete color */
+    color: #fff;  /* Text color */
+}
+.procedure-item.incomplete {
+    background-color: #D1D1D1; /* Incomplete color */
+    cursor: not-allowed; /* Show not-allowed cursor for incomplete items */
+}
+.procedure-item:hover:not([disabled]) {
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+.procedure-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #F8F8F8;
+}
+.procedure-text {
+    text-align: center;
+}
+.procedure-text.text-complete h3,
+.procedure-text.text-complete p {
+    color: #000; /* Complete text color */
+}
+.procedure-text.text-incomplete h3,
+.procedure-text.text-incomplete p {
+    color: #666; /* Incomplete text color */
+}
+.start-button:hover {
+    background-color: #21030b; 
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

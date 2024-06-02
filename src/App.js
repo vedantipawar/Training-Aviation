@@ -7,6 +7,7 @@ import About from './pages/About.jsx';
 import Analytics from './pages/Analytics.jsx';
 // import Comment from './pages/Comment.jsx';
 import ProcedureDetail from './pages/ProcedureDetail.jsx';
+import NewPage from './pages/NewPage.jsx'; 
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           {/* <Route path="/Comment" element={<Comment />} /> */}
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/procedure/:id" element={<ProcedureDetail/>} />
+          <Route path="/new-page" element={<NewPage />} />
         </Routes>
       </Sidebar>
     </BrowserRouter>
