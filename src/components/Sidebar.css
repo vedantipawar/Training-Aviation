@@ -1,0 +1,50 @@
+/* Sidebar.css */
+/* Add this at the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* General background of the sidebar */
+.sidebar {
+    background-color: #fc0444; /* Dark grey background */
+    color: #ffffff; /* White text color */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Active link styling */
+.active {
+    padding-top: 4cm;
+    background-color: #4CAF50; /* Green background for active link */
+    color: #ffffff; /* White text color for active link */
+}
+
+.link {
+    padding: 10px 20px; /* Adjust padding as necessary */
+    background-color: #fc0444; /* Slightly lighter grey background */
+    color: #ffffff; /* Light grey text color */
+    
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.link:hover {
+    background-color: #ffffff; /* Medium grey background on hover */
+    color: #fc0444; /* White text color on hover */
+    border-radius: 10px;
+}
+
+.top_section {
+    background-color: #fc0444; /* Very dark grey background */
+}
+
+.logo {
+    color: #ffffff; /* Green text color for the logo */
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+
+.bars {
+    color: #ffffff; /* Light grey icon color */
+}
