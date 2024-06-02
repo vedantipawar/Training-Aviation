@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    
+    background-color: #F8F8F8;
+}
+.container {
+    display: flex;   /* Use flexbox to layout children */
+    align-items: center; /* Center align children vertically */
+    justify-content: center; /* Space between left and right containers */
+    height: 100vh; /* Full viewport height to center align vertically */
+    text-align: left;
+
+}
+.left-container {
+    flex: 2;
+    width: 400px !important; /* Set a fixed width */
+    height: 600px;  
+    margin : 10px; 
+    background-color: aquamarine; 
+
+}
+
+.right-container {
+    flex: 1;
+    text-align: left;
+    text-justify: inter-word;
+    hyphens: auto; /* This automatically adds hyphens where appropriate */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px; /* Set a fixed width */
+    height: 500px ;
+    text-align: center;
+    font-family: 'Roboto';
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack the title and description vertically */
+    justify-content: space-between; /* Center content vertically within the container */
+    padding: 20px 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center; /* Centers the button horizontally in the flex container */
+    margin-top: 20px; /* Optional: Adds some space between the text and the button */
+}
+
+@media (max-width: 600px) {
+    
+    .start-button {
+        padding: 8px 16px;
+    }
+}

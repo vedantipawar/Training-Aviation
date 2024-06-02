@@ -1,5 +1,17 @@
+@media (forced-colors: active) {
+    /* Styles here only apply to Forced Colors Mode */
+  }
+  
+
+  @media (forced-colors: active) {
+    .prefs__palette {
+      forced-color-adjust: none;
+    }
+  }
 body {
     background-color: #dfe7fa;
+    height: 100vh;
+
 }
 
 .title {
@@ -8,12 +20,24 @@ body {
 
 .card {    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 250px; 
-    height: 350px;   
+    width: 220px; 
+    height: 310px;   
     margin : 10px;    
     text-align: center;
     font-family: Arial, sans-serif;
     background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.recent-procedures-card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px; 
+    height: 200px;   
+    margin : 10px;    
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color:     #d7dce4;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -37,6 +61,14 @@ body {
     margin: 0.5rem 0;
 }
 
+.recent-procedures-card-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: rgb(255, 255, 255);
+
+}
+
 .card-subtitle {
     color: rgb(22, 21, 21);
     font-size: 0.9rem;
@@ -55,6 +87,19 @@ body {
     align-items: center;
 }
 
+.recent-procedures-overlay {
+    /* position: relative; */
+    
+    width: 100%;
+    height: 30%;
+    background:  #d7dce4;/* Optional background for better visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 120px 0; 
+}
+
 .completion {
     font-size: 1.2rem;
     font-weight: bold;
@@ -66,3 +111,40 @@ body {
     padding: 5px; /* Optional padding for better visibility */
     border-radius: 5px; /* Optional border radius */
 }
+.rp-completion{
+    position: relative;
+
+}
+
+.star-filled {
+    font-size: 24px;
+    color: #FFFFFF; /* White color for filled stars */
+}
+
+.star-unfilled {
+    font-size: 24px;
+    color: transparent; /* Make the star "empty" */
+    text-shadow: 
+        -0.01px -0.01px 0 #FFF,  
+        0.01px -0.01px 0 #FFF,
+        -0.01px  0.01px 0 #FFF,
+        0.01px  0.01px 0 #FFF; /* White shadow to simulate a border around the star */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between the icons */
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .icon-ps {
+    background-color: rgb(255, 255, 255); /* Circle background color */
+    color: rgb(0, 0, 0); /* Icon color */
+    padding: 10px;
+    border-radius: 50%; /* Make the background circular */
+    font-size: 20px; /* Adjust icon size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow */
+  }
+  

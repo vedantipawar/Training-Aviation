@@ -3,7 +3,7 @@ import React from 'react';
 const Analytics = () => {
     return (
         <div>
-            <h1>Emergency procedures</h1>
+            <h1>Scenarios</h1>
         </div>
     );
 };

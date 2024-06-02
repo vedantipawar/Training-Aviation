@@ -21,7 +21,7 @@ const Sidebar = ({children}) => {
             
         },
         {
-            path:"/",
+            path:"/Dashboard",
             name:"Emergency Procedures",
             icon:<FaCircle className="small-circle"/>
         },        
@@ -38,7 +38,7 @@ const Sidebar = ({children}) => {
     ]
     return (
         <div className="container">
-           <div style={{width: isOpen ? "600px" : "50px"}} className="sidebar">
+           <div style={{width: isOpen ? "270px" : "60px"}} className="sidebar">
                <div className="top_section">
                    <div style={{marginLeft: isOpen ? "0px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
